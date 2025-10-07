@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { clearUser } from "../features/user/userSlice";
 import { clearJobs } from "../features/jobs/jobSlice";
 import { clearNotifications } from "../features/notifications/notificationSlice";
+import axios from "axios";
 // import { clearCart } from "../features/cart/cartSlice";
 const Header = () => {
   const navigate = useNavigate();
@@ -16,6 +17,11 @@ const Header = () => {
     dispatch(clearJobs());
     dispatch(clearUser());
     dispatch(clearNotifications());
+    axios.post(
+      "http://localhost:3000/api/auth/logout",
+      {},
+      { withCredentials: true }
+    );
   };
   return (
     <header className=" bg-neutral py-2 text-neutral-content ">

@@ -145,7 +145,7 @@ const Jobs = () => {
                         {/* Skills Section */}
 
                         <div>
-                          <div className="flex flex-wrap gap-2 bg-gray-50 rounded-lg p-3">
+                          <div className="flex flex-wrap gap-2  rounded-lg p-3">
                             <p className="text-sm font-semibold text-gray-700 leading-relaxed line-clamp-3">
                               Required Skills
                             </p>
