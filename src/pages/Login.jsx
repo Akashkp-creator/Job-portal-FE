@@ -110,7 +110,7 @@ const Login = () => {
               type="password"
               id="password"
               name="password"
-              value="StrongPass@123"
+              // value="StrongPass@123"
               placeholder="Enter your password"
               className="input input-bordered w-full pl-10 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300 rounded-lg"
               required

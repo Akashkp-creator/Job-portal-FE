@@ -6,13 +6,13 @@ const initialState = {
   totalJobs: 0,
   companyInfo: "",
 };
-
+// console.log(initialState.jobs);
 const jobSlice = createSlice({
   name: "job",
   initialState,
   reducers: {
     setJobs: (state, action) => {
-      // console.log(action.payload.jobs[0].companyId);
+      // console.log(action.payload);
       state.jobs = action.payload.jobs;
       state.companyInfo = action.payload.jobs[0].companyId;
 

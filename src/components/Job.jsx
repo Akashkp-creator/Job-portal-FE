@@ -16,13 +16,14 @@ const Jobs = () => {
   const { companyName, industry, profilePicture } = useSelector(
     (state) => state.jobState?.companyInfo
   );
+  // console.log(companyName);
 
   const data = useLoaderData();
   // console.log(companyName, industry, profilePicture);
   //   const jobs = data?.jobs || [];
   //   console.log("Jobs from loader:", jobs);
   const [jobs, setJobs] = useState(data?.jobs || []);
-
+  // console.log(jobs);
   if (!jobs || jobs.length === 0) {
     return (
       <div className="text-center mt-12">
@@ -123,7 +124,7 @@ const Jobs = () => {
                                 Company
                               </p>
                               <p className="text-sm font-bold text-gray-800">
-                                {companyName}
+                                {job.companyId?.companyName || "N/A"}
                               </p>
                             </div>
                           </div>
@@ -137,7 +138,7 @@ const Jobs = () => {
                                 Industry
                               </p>
                               <p className="text-sm font-bold text-gray-800">
-                                {industry}
+                                {job.companyId?.industry || "N/A"}
                               </p>
                             </div>
                           </div>
